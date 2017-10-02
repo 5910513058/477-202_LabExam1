@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["r030v"]); }
-
-__d('KeyframesNetworkLoader',['Promise','XHRRequest'],(function a(b,c,d,e,f,g){'use strict';var h={};function i(k){var l;if(!k||typeof k!=='string')return c('Promise').reject('Request: invalid path '+k);if(h[k]==null)(function(){var m={finished:false,promise:new (c('Promise'))(function(n,o){return new (c('XHRRequest'))(k).setMethod('GET').setResponseType('arraybuffer').setErrorHandler(o).setAbortHandler(o).setResponseHandler(function(p){m.finished=true;return n(p)}).send()})};h[k]=m})();return h[k].promise}var j={load:function k(l){return i(l)},hasLoaded:function k(l){return h[l]!=null&&h[l].finished},clearCache:function k(){h={}}};f.exports=j}),null);
